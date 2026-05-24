@@ -1,0 +1,32 @@
+# Build artifacts
+/bin/
+/dist/
+/slatectl
+/slate-bench
+
+# Test / coverage output
+*.test
+*.out
+coverage.txt
+coverage.html
+
+# Profiling
+*.prof
+*.pprof
+*.svg
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local environment
+.env
+.env.local
+
+# Scratch
+/tmp/
+/testdata/scratch/
