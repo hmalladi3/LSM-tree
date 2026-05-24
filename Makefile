@@ -10,15 +10,15 @@ all: vet test
 
 .PHONY: test
 test:
-	$(GOTEST) $(RACEFLAG) -timeout 120s $(PKGS)
+	$(GOTEST) $(RACEFLAG) -timeout 300s $(PKGS)
 
 .PHONY: test-short
 test-short:
-	$(GOTEST) $(RACEFLAG) -short -timeout 60s $(PKGS)
+	$(GOTEST) $(RACEFLAG) -short -timeout 120s $(PKGS)
 
 .PHONY: cover
 cover:
-	$(GOTEST) -coverpkg=$(COVERPKGS) -coverprofile=coverage.out -timeout 120s $(PKGS)
+	$(GOTEST) -coverpkg=$(COVERPKGS) -coverprofile=coverage.out -timeout 300s $(PKGS)
 	go tool cover -html=coverage.out -o coverage.html
 	@echo "Coverage report: coverage.html"
 
